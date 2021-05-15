@@ -1,10 +1,10 @@
-import { Router } from 'express';
+import { Router } from 'express'
 import EmailController from './controllers/emailController'
 
-const routes = Router();
+const routes = Router()
 
-const emailController = new EmailController();
+const emailController = new EmailController()
 
 routes.post('/send', emailController.postEmail)
 
-export default routes;
+export default routes

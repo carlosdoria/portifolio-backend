@@ -2,14 +2,14 @@ import 'dotenv/config'
 import express from 'express'
 import 'express-async-errors'
 import cors from 'cors'
-import routes from './routes';
+import routes from './routes'
 
-const app = express();
+const app = express()
 
-app.use(cors());
-app.use(express.json());
-app.use(routes);
+app.use(cors())
+app.use(express.json())
+app.use(routes)
 
 app.listen(process.env.PORT, () => {
-  console.log(`Running on port: ${process.env.PORT}`);
-});
+  console.log(`Running on port: ${process.env.PORT}`)
+})

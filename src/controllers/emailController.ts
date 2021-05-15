@@ -1,8 +1,8 @@
-import { Request, Response } from 'express';
-import nodemailer from "nodemailer"
+import { Request, Response } from 'express'
+import nodemailer from 'nodemailer'
 
 class EmailController {
-  async postEmail(req: Request, res: Response) {
+  async postEmail (req: Request, res: Response) {
     const { name, email, message } = req.body
 
     const transporter = nodemailer.createTransport({
@@ -26,7 +26,6 @@ class EmailController {
       text: message
     }).then(results => res.status(200).json({ Message: results }))
       .catch(err => res.status(400).json({ erro: 'Error: ' + err }))
-
   }
 }
 
